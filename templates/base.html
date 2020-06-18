@@ -20,16 +20,16 @@
 
 
     <div class="wrapper">
+        <div class="wrapper-content">
+            {% include 'navbar.html' %}
 
-        {% include 'navbar.html' %}
-
-        {% block content %}
-            {% include 'landing/home.html' %}
-        {% endblock content %}
-
-        {% include 'footer.html' %}
+            {% block content %}
+            {% endblock content %}
+        </div>
 
     </div>
+
+    {% include 'footer.html' %}
 
 
 <!-- jQuery -->
