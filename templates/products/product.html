@@ -4,11 +4,27 @@
 
 
 {% block content %}
-
-    <h3>Test</h3>
-    <p>
-        {{ product.name }}
-    </p>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {% for image_item in product.productimage_set.all %}
+                    <img src="{{ image_item.image.url }}" style="width: 80%; height: 30em">
+                {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                <h1 class="text-center">
+                    {{ product.name }}
+                </h1>
+                <div class="">
+                    <p>
+                        Price: {{ product.price }}
+                    </p>
+                </div>
+                <div class="">
+                    {{ product.desription }}
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

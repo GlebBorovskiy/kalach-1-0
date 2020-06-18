@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 admin.autodiscover()
 
-# paths
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('landing.urls')),
